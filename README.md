@@ -1,5 +1,7 @@
 # Electrode OTA Server
 
+[![ci][1]][2]
+
 The Electrode OTA Server provides a way to hot deploy android and ios React Native&#8482; and Cordova&#8482; apps. The server
 is API compatible with [code-push-cli](https://microsoft.github.io/code-push/docs/cli.html), the
 [Code Push React Native SDK](https://microsoft.github.io/code-push/docs/react-native.html) and the [Code Push Cordova SDK](https://microsoft.github.io/code-push/docs/cordova.html).
@@ -233,3 +235,6 @@ This creates a base project.  Update `package.json` to match other projects.
 Apache-2.0 © WalmartLabs
 <br>
 Built with :heart: by [Team Electrode](https://github.com/orgs/electrode-io/people) @WalmartLabs.
+
+[1]: https://github.com/friederbluemle/electrode-ota-server/workflows/ci/badge.svg
+[2]: https://github.com/friederbluemle/electrode-ota-server/actions
