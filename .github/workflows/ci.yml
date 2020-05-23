@@ -3,17 +3,18 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: electrode-ota-mariadb-schema
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - uses: fabasoad/setup-cassandra-action@v1.0.0
+      #- uses: fabasoad/setup-cassandra-action@v1.0.0
       - run: yarn
-      - working-directory: ./electrode-ota-mariadb-schema
-        run: |
+      - run: |
           docker-compose build
           docker-compose up -d
           docker-compose exec ota-db /common/wait-for-it.sh -t 30 ota-db:3306
           docker-compose logs
-      - run: yarn test
-      - working-directory: ./electrode-ota-mariadb-schema
-        run: docker-compose down
+          yarn test
+          docker-compose down
