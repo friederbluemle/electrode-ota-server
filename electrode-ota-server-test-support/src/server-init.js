@@ -30,7 +30,7 @@ export default () => init().then(client => {
 
         return makeUser('test@walmartlabs.com').then((extraAccessKey) => makeUser('test2@walmartlabs.com').then(accessKey => {
             return {
-                serverUrl: `http://localhost.walmart.com:${process.env.PORT}`,
+                serverUrl: `http://localhost:${process.env.PORT}`,
                 aquistionServerUrl: `/`,
                 agent: supertest(server.listener),
                 accessKey,

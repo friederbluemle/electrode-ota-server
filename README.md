@@ -89,7 +89,7 @@ Make sure to backup your data, while not known to cause data loss, it is possibl
 
 ## Development
 
-To run tests, make sure you have `localhost.walmart.com` mapped to 127.0.0.1 loopback.
+To run tests, make sure you have `localhost` mapped to 127.0.0.1 loopback.
 Make sure you have cassandra installed. Cassandra is required for testings.
 
 ```sh
